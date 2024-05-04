@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Details Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <style>
+        *{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        body {
+            padding-top: 5rem;
+            background-color: #f8f9fa;
+        }
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Bus Details Form</h2>
+        <form action="/newBus" method="POST">
+            <div class="mb-3">
+                <label for="busNo" class="form-label">Bus Number:</label>
+                <input type="number" id="busNo" name="userBusNo" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="sourceLocation" class="form-label">Source Location:</label>
+                <input type="text" id="sourceLocation" name="sourceLocation" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="destinationLocation" class="form-label">Destination Location:</label>
+                <input type="text" id="destinationLocation" name="destinationLocation" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="busCapacity" class="form-label">Bus Capacity:</label>
+                <input type="number" id="busCapacity" name="busCapacity" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="date" class="form-label">Date:</label>
+                <input type="date" id="date" name="date" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="avaliableSeats" class="form-label">Available Seats:</label>
+                <input type="number" id="avaliableSeats" name="avaliableSeats" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="busAc" class="form-label">Bus AC:</label>
+                <select id="busAc" name="busAc" class="form-select">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
